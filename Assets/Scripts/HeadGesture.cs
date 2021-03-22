@@ -9,8 +9,6 @@ public class HeadGesture : MonoBehaviour {
 	private float sweepRate = 100.0f;
 	private float previousCameraAngle;
 
-	public Transform centerEyeAnchor;
-
 	// Start is called before the first frame update
 	void Start() {
 		previousCameraAngle = CameraAngleFromGround();
@@ -35,6 +33,6 @@ public class HeadGesture : MonoBehaviour {
 	}
 
 	private float CameraAngleFromGround() {
-		return Vector3.Angle(Vector3.down, centerEyeAnchor.rotation * Vector3.forward);
+		return Vector3.Angle(Vector3.down, Camera.main.transform.rotation * Vector3.forward);
 	}
 }

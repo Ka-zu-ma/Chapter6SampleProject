@@ -2070,6 +2070,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 0.7
+  isWalking: 0
 --- !u!143 &1123306821
 CharacterController:
   m_ObjectHideFlags: 0
@@ -2088,6 +2089,18 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1123306822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123306819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc0fdaffe95c9194eb5a01899f314013, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1197330953
 GameObject:
   m_ObjectHideFlags: 0
