@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class BodyWalk : MonoBehaviour {
 	private HeadLookWalk lookWalk;
+	private AudioSource footsteps;
 	private Transform head;
 	private Transform body;
 	// Start is called before the first frame update
 	void Start() {
 		lookWalk = GetComponent<HeadLookWalk>();
+		footsteps = GetComponent<AudioSource>();
 		head = Camera.main.transform;
 		body = transform.Find("MeBody");
 	}
@@ -17,6 +19,11 @@ public class BodyWalk : MonoBehaviour {
 	void Update() {
 		if (lookWalk.isWalking) {
 			body.transform.rotation = Quaternion.Euler(new Vector3(0.0f, head.transform.eulerAngles.y, 0.0f));
+			if (!footsteps.isPlaying) {
+				footsteps.Play();
+			}
+		} else {
+			footsteps.Stop();
 		}
 	}
 }
