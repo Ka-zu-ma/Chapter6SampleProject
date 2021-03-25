@@ -18,6 +18,11 @@ public class Trampoline : MonoBehaviour {
 		Rigidbody rb = other.GetComponent<Rigidbody>();
 		if (rb != null) {
 			rb.AddForce(Vector3.up * bounceForce);
+		} else {
+			HeadLookWalkBounce locomotor = other.GetComponent<HeadLookWalkBounce>();
+			if (locomotor != null) {
+				locomotor.bounceForce = bounceForce;
+			}
 		}
 	}
 }
