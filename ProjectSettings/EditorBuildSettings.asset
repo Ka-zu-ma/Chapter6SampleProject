@@ -11,9 +11,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/BrickTrampoline.unity
     guid: 691b600a8ed455e43baf6c8d7cd0d75a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/HumanTrampoline.unity
     guid: c3d67cd289930814e8db395a9d25ca34
+  - enabled: 1
+    path: Assets/PhysicsWorld.unity
+    guid: 7c38b59227b65da40b4a87c36f2c6551
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 22b25bc7abc7da74c8b337f015f5e626,
       type: 2}
